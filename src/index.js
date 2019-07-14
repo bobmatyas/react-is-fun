@@ -1,12 +1,56 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import React from 'react'
+import ReactDOM from 'react-dom'
 
-ReactDOM.render(<App />, document.getElementById('root'));
+import Library from './Library'
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+let bookList = [
+  { "title": "Jungle Book", "author": "Kipling"},
+  { "title": "Peter Pan", "pages": 230},
+  { "title": "Tom Sawyer", "author": "Mark Twain", "pages": 500},
+]
+
+
+
+
+
+
+
+
+
+
+ReactDOM.render(
+  <Library books={bookList} />,   
+  document.getElementById('root')
+)
+
+
+// class FavoriteColorForm extends React.Component {
+//   state = { value: ''}
+  
+//   newColor = e => {
+//     this.setState({value: e.target.value})
+//   }
+  
+//   submit = e => {
+//     console.log(`New Color: ${this.state.value}`)
+//     e.preventDefault()
+//   }
+  
+//   render () {
+//     return (
+//       <form onSubmit={this.submit}>
+//         <label>Favorite Color:</label>
+//         <input 
+//           type="color" 
+//           onChange={this.newColor} />
+//         <button>Submit</button>
+//       </form>
+//     )
+//   }
+// }
+
+// ReactDOM.render(
+//   <FavoriteColorForm />,   
+//   document.getElementById('root')
+// )
+
